@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Redaction Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>PDF Redaction Tool</h1>
+        <p>Upload a PDF file to redact sensitive personal information using our trained model.</p>
+        
+        <!-- Upload Form -->
+        <form method="post" enctype="multipart/form-data" action="/upload">
+            <label for="file">Choose a PDF File:</label>
+            <input type="file" name="file" id="file" accept=".pdf" required>
+            <br>
+            <button type="submit">Upload and Redact</button>
+        </form>
+        
+        <!-- Footer -->
+        <div class="footer">
+        </div>
+    </div>
+</body>
+</html>
